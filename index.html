@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAJLEPSZE BONUSY POWITALNE - CIOSIKI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./background.webp');
+            background-size: cover;
+            background-color: black;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -2;
+        }
+        
+        .content-overlay {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header {
+            padding: 1rem 2rem;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom right, #d3e512, black);
+            padding: 2px;
+        }
+        
+        .logo-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+        
+        .leaderboard-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .prize-amount {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 3.2rem;
+            background: linear-gradient(to right, #adbb0f, #d3e512, #9fac18);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 30px rgba(211, 229, 18, 0.4);
+            margin-bottom: 1rem;
+        }
+        
+        .leaderboard-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .description {
+            font-size: 1rem;
+            color: #d1d5db;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+        }
+        
+        .code-highlight {
+            background: rgba(207, 245, 120, 0.1);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #d3e512;
+        }
+        
+        .partners {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .stake-logo {
+            height: 4rem;
+        }
+        
+        .tyceno-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 3rem;
+            background: linear-gradient(to right, #d3e512, #c6d615);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 600px;
+            margin: 3rem auto;
+        }
+        
+        .divider-line {
+            flex: 1;
+            height: 2px;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+        }
+        
+        .divider-center {
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .divider-dot {
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #6b7280;
+        }
+        
+        .divider-dot-main {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #d3e512;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(to right, #b6c510, #ddf014);
+            color: black;
+            border: none;
+        }
+        
+        .btn-primary:hover {
+            background: linear-gradient(to right, #dff117, #d3e512);
+            transform: scale(1.05);
+        }
+        
+        .btn-secondary {
+            background: rgba(38, 38, 38, 0.8);
+            color: white;
+            border: 1px solid rgba(55, 65, 81, 0.7);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(55, 65, 81, 0.8);
+            border-color: rgba(107, 114, 128, 0.7);
+        }
+        
+        .rules-card {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: rgba(23, 23, 23, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+        
+        .rules-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .rules-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .rules-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(38, 38, 38, 0.5);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(55, 65, 81, 0.5);
+        }
+        
+        .rules-content {
+            padding: 1.5rem;
+        }
+        
+        .warning-box {
+            background: rgba(214, 169, 93, 0.1);
+            border-left: 2px solid #d3e512;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 0.75rem;
+        }
+        
+        .warning-icon {
+            color: #d3e512;
+            flex-shrink: 0;
+        }
+        
+        .rtp-rules {
+            background: rgba(38, 38, 38, 0.4);
+            border: 1px solid rgba(55, 65, 81, 0.5);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .rtp-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        
+        .rtp-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.75rem;
+        }
+        
+        .rtp-item {
+            background: rgba(23, 23, 23, 0.5);
+            border: 1px solid rgba(55, 65, 81, 0.5);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+        
+        .rtp-type {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .rtp-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        
+        .rtp-description {
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+        
+        .help-box {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: rgba(38, 38, 38, 0.3);
+            border: 1px solid rgba(55, 65, 81, 0.3);
+            border-radius: 8px;
+        }
+
+        /* Sekcja rekomendacji */
+        .recommendations-section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            position: relative;
+            z-index: 10;
+            margin-bottom: -0.5rem;
+            margin-top: -2.5rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 0.5rem;
+            padding-top: 1rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+                padding-top: 2rem;
+            }
+        }
+
+        .section-subtitle {
+            font-size: 0.875rem;
+            text-align: center;
+            color: #d1d5db;
+            margin-bottom: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        @media (min-width: 768px) {
+            .section-subtitle {
+                font-size: 1.25rem;
+                margin-bottom: 3rem;
+            }
+        }
+
+        .magical-text {
+            background: linear-gradient(to right, #d3e512, #c6d615);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            position: relative;
+        }
+
+        .magical-text::before {
+            content: "REKOMENDUJE";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, #d3e512, #c6d615);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            filter: blur(4px);
+            opacity: 0.4;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 0.6; }
+        }
+
+        .casino-card-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .casino-card {
+            background: transparent;
+            border-radius: 12px;
+            position: relative;
+            min-height: 550px;
+            width: 450px;
+            max-width: 95%;
+            overflow: hidden;
+            border: 2px solid #d3e512;
+            transform: rotate(-1deg);
+            transition: transform 0.3s ease;
+        }
+
+        .casino-card:hover {
+            transform: rotate(-1deg) scale(1.02);
+        }
+
+        .casino-card-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .casino-card-bg img {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            color: transparent;
+        }
+
+        .casino-card-bg-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(12, 12, 12, 0.8);
+        }
+
+        .casino-card-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+        }
+
+        .casino-logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .casino-logo {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .casino-logo img {
+            object-fit: contain;
+            width: 60%;
+            color: transparent;
+        }
+
+        @media (min-width: 768px) {
+            .casino-logo img {
+                width: 70%;
+            }
+        }
+
+        .bonus-badge {
+            background: linear-gradient(to right, #b6c510, #ddf014);
+            border-radius: 9999px;
+            text-align: center;
+            padding: 0.25rem 0.75rem;
+            width: fit-content;
+            margin: 0 auto 0.75rem;
+        }
+
+        @media (min-width: 768px) {
+            .bonus-badge {
+                margin-bottom: 1.5rem;
+                padding: 0.25rem 1rem;
+            }
+        }
+
+        .bonus-badge span {
+            font-weight: 800;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .casino-card h4 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 0.25rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .casino-card h4 {
+                font-size: 1.875rem;
+                margin-bottom: 0.5rem;
+                margin-top: 0;
+            }
+        }
+
+        .casino-card p {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .casino-card p {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .pros-section {
+            margin-bottom: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .pros-section {
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+            }
+        }
+
+        .pros-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .pros-title {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        .pros-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .pros-list {
+                gap: 0.75rem;
+            }
+        }
+
+        .pros-list li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pros-list svg {
+            margin-right: 0.5rem;
+            color: #d3e512;
+            flex-shrink: 0;
+        }
+
+        .pros-list span {
+            color: white;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        @media (min-width: 768px) {
+            .pros-list span {
+                font-size: 1rem;
+            }
+        }
+
+        .bonus-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: auto;
+            padding-top: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .bonus-button-container {
+                padding-top: 0;
+            }
+        }
+
+        .bonus-button {
+            background: linear-gradient(to right, #b6c510, #ddf014);
+            border-radius: 8px;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s;
+            margin-bottom: 4rem;
+        }
+
+        @media (min-width: 768px) {
+            .bonus-button {
+                padding: 0.75rem 1.5rem;
+            }
+        }
+
+        .bonus-button:hover {
+            background: linear-gradient(to right, #dff117, #d3e512);
+            transform: scale(1.05);
+        }
+
+        .bonus-button span {
+            font-weight: 800;
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.25rem;
+        }
+        
+        /* Nowy footer */
+        .footer-disclaimer {
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(211, 229, 18, 0.3);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 -5px 20px rgba(211, 229, 18, 0.1);
+        }
+        
+        .footer-text {
+            font-size: 0.85rem;
+            color: #d1d5db;
+            line-height: 1.5;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .footer-text strong {
+            color: #d3e512;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .prize-amount {
+                font-size: 4rem;
+            }
+            
+            .leaderboard-title {
+                font-size: 2rem;
+            }
+            
+            .partners {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .rtp-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-disclaimer {
+                padding: 1rem;
+            }
+            
+            .footer-text {
+                font-size: 0.8rem;
+            }
+
+            .casino-card {
+                transform: rotate(0deg);
+            }
+
+            .casino-card:hover {
+                transform: scale(1.02);
+            }
+        }
+
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 1px solid #d3e512;
+            box-shadow: 0 0 20px rgba(211, 229, 18, 0.4);
+            overflow: hidden;
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            position: relative;
+        }
+
+        .profile-circle::after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            background: linear-gradient(45deg, #b6c510, #9fac18, #adbb10);
+            background-size: 200% 200%;
+            animation: neon-glow 3s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes neon-glow {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        .profile-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .prize-amount {
+                font-size: 2.5rem !important;
+                line-height: 1.2;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .leaderboard-title,
+        .prize-amount,
+        .tyceno-text,
+        .section-title,
+        .section-subtitle,
+        .btn,
+        .bonus-badge span,
+        .bonus-button span,
+        .footer-text,
+        .pros-title,
+        .casino-card h4,
+        .casino-card p,
+        .pros-list span {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Dodatkowe style dla różnych wag Montserrat */
+        .leaderboard-title {
+            font-weight: 700;
+        }
+
+        .prize-amount {
+            font-weight: 900;
+        }
+
+        .tyceno-text {
+            font-weight: 900;
+        }
+
+        .section-title {
+            font-weight: 700;
+        }
+
+        .btn {
+            font-weight: 700;
+        }
+
+        .bonus-badge span {
+            font-weight: 800;
+        }
+
+        .bonus-button span {
+            font-weight: 800;
+        }
+
+        .footer-text {
+            font-weight: 400;
+        }
+
+        .pros-title {
+            font-weight: 700;
+        }
+
+        .casino-card h4 {
+            font-weight: 700;
+        }
+
+        .casino-card p {
+            font-weight: 400;
+        }
+
+        .pros-list span {
+            font-weight: 500;
+        }
+
+        /* Sekcja instrukcji */
+        .instructions-section {
+            position: relative;
+            padding: 4rem 1rem;
+            margin-bottom: 0;
+        }
+
+        .instructions-background {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background-image: url('./background.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .instructions-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        .instructions-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        .instructions-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+
+        .instructions-gradient {
+            background: linear-gradient(to right, #b6c510, #ddf014);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 900;
+            position: relative;
+        }
+
+        .instructions-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .instructions-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .instruction-card {
+            position: relative;
+            background: rgba(19, 19, 19, 0.8);
+            border-radius: 30px;
+            overflow: hidden;
+            height: 100%;
+            min-height: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .instruction-card.active {
+            background: rgba(19, 19, 19, 0.95);
+            cursor: pointer;
+        }
+
+        .instruction-card.active:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(211, 229, 18, 0.2);
+            border-color: rgba(211, 229, 18, 0.3);
+        }
+
+        .instruction-card.disabled {
+            opacity: 0.6;
+        }
+
+        .info-icon {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: #d3e512;
+            border-radius: 50%;
+            padding: 0.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .instruction-content {
+            text-align: center;
+            z-index: 10;
+        }
+
+        .instruction-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .instruction-card.disabled .instruction-title {
+            opacity: 0.5;
+        }
+
+        .instruction-link {
+            text-decoration: none;
+            display: block;
+            height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .instructions-title {
+                font-size: 2rem;
+            }
+            
+            .instruction-card {
+                min-height: 150px;
+                padding: 2rem 1rem;
+            }
+            
+            .instruction-title {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Tło z grafiką -->
+    <div class="background-image"></div>
+    
+    <div class="content-overlay">
+        <!-- Sekcja główna -->
+        <section class="leaderboard-section">
+            <div class="profile-section">
+                <div class="profile-circle">
+                    <img src="./pfp.png" alt="Profil">
+                </div>
+            </div>
+
+            <h1 class="prize-amount">NAJLEPSZE<br> <span style="color: #fff;">REKOMENDACJE</span></h1>
+            <p class="description">
+                Zarejestruj się z kodem <span class="code-highlight">CIOS</span> i odbierz szczęśliwe bonusy
+            </p>
+            
+            <div class="partners">
+                <div class="stake-logo">
+                    <!-- Stake logo placeholder -->
+                    <img src="./spinbetter.png" alt="spinbetter" style="height: 100%; width: auto;">
+                </div>
+                <div style="font-size: 2rem; font-weight: bold; color: #fff;">×</div>
+                <div class="tyceno-text">CIOS</div>
+            </div>
+            
+            <div class="divider">
+                <div class="divider-line"></div>
+                <div class="divider-center">
+                    <div class="divider-dot"></div>
+                    <div class="divider-dot"></div>
+                    <div class="divider-dot-main"></div>
+                    <div class="divider-dot"></div>
+                    <div class="divider-dot"></div>
+                </div>
+                <div class="divider-line"></div>
+            </div>
+            
+        </section>
+
+        <!-- Sekcja rekomendacji -->
+        <section class="recommendations-section">
+            <h2 class="section-title">
+                CIOS <span class="magical-text">REKOMENDUJE</span>
+            </h2>
+            <p class="section-subtitle">
+                ODBIERZ NAJLEPSZE BONUSY
+            </p>
+            <div class="casino-card-container">
+                <div class="casino-card">
+                    <div class="casino-card-bg">
+                        <img alt="Spinbara Background" src="./banner1.png">
+                        <div class="casino-card-bg-overlay"></div>
+                    </div>
+                    <div class="casino-card-content">
+                        <div>
+                            <div class="casino-logo">
+                                <img alt="Spinbetter Logo" src="./spinbetter.png">
+                            </div>
+                            <div class="bonus-badge">
+                                <span>BONUS POWITALNY</span>
+                            </div>
+                            <h4>111 FS z wagerem x15 do gry Chicken Chase™</h4>
+                            <p>od depozytu</p>
+                            <div class="pros-section">
+                                <h5 class="pros-title">
+                                    Największe plusy
+                                </h5>
+                                <ul class="pros-list">
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 6 9 17l-5-5"></path>
+                                        </svg>
+                                        <span>Bonus powitalny 150%</span>
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 6 9 17l-5-5"></path>
+                                        </svg>
+                                        <span>111 darmowych spinów</span>
+                                    </li>
+                                    <li>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M20 6 9 17l-5-5"></path>
+                                        </svg>
+                                        <span>Szybkie wypłaty w 24h</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bonus-button-container">
+                            <a href="https://redirspinner.com/2xVd?p=%2Fregistration%2F" target="_blank" rel="noopener noreferrer" class="bonus-button">
+                                <span>Odbierz Bonus</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="divider">
+        <div class="divider-line"></div>
+        <div class="divider-center">
+            <div class="divider-dot"></div>
+            <div class="divider-dot"></div>
+            <div class="divider-dot-main"></div>
+            <div class="divider-dot"></div>
+            <div class="divider-dot"></div>
+        </div>
+        <div class="divider-line"></div>
+    </div>
+
+    <!-- Sekcja instrukcji -->
+    <section class="instructions-section">
+        <div class="instructions-background">
+            <div class="instructions-overlay"></div>
+        </div>
+        <div class="instructions-container">
+            <h2 class="instructions-title">
+                Przydatne <span class="instructions-gradient">Instrukcje</span>
+            </h2>
+            <div class="instructions-grid">
+                <!-- Karta 1 - AKTYWNA -->
+                <a class="instruction-link" href="./wplacanie.html">
+                    <div class="instruction-card active">
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 16v-4"></path>
+                                <path d="M12 8h.01"></path>
+                            </svg>
+                        </div>
+                        <div class="instruction-content">
+                            <h3 class="instruction-title">Jak wpłacać poprzez krypto</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Karta 2 - Aktywna -->
+                <a class="instruction-link" href="./instrukcje.html">
+                    <div class="instruction-card active">
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 16v-4"></path>
+                                <path d="M12 8h.01"></path>
+                            </svg>
+                        </div>
+                        <div class="instruction-content">
+                            <h3 class="instruction-title">Jak ominąć blokady dostawcy internetu</h3>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Karta 3 - AKTYWNA -->
+                <a class="instruction-link" href="./wyplacanie.html">
+                    <div class="instruction-card active">
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 16v-4"></path>
+                                <path d="M12 8h.01"></path>
+                            </svg>
+                        </div>
+                        <div class="instruction-content">
+                            <h3 class="instruction-title">Jak bezpiecznie wypłacać</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Nowy footer -->
+    <footer class="footer-disclaimer">
+        <p class="footer-text">
+            <strong>Ważna informacja:</strong> Ta strona internetowa prezentuje informacje o ekskluzywnych kasynach oraz zawiera odnośniki partnerskie, które są przeznaczone wyłącznie dla osób przebywających w regionach, gdzie internetowe gry losowe są dozwolone przez prawo.<br>
+            Obowiązkiem użytkowników jest upewnienie się, że ich aktywność jest zgodna z lokalnymi przepisami. Nie zachęcamy ani nie popieramy nielegalnych form hazardu.<br>
+            Zanim skorzystasz z jakichkolwiek ofert przedstawionych na tej stronie, gorąco rekomendujemy zweryfikowanie legalności hazardu online w Twojej lokalizacji.
+        </p>
+    </footer>
+</body>
+</html>
