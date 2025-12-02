@@ -6,6 +6,13 @@
     <title>ŚWIĘTA Z CIOSEM - NAJLEPSZE BONUSY POWITALNE</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./favicon.png">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="ŚWIĘTA Z CIOSEM - WYGRAJ 2.000zŁ!">
+    <meta property="og:description" content="Zarejestruj się z kodem CIOS, zrób depozyt i wygraj 2.000zł! Co 3 dni losujemy zwycięzcę.">
+    <meta property="og:image" content="./favicon.png">
+    <meta property="og:type" content="website">
+
     <style>
         * {
             margin: 0;
@@ -116,7 +123,7 @@
             font-size: 1rem;
             color: #d1d5db;
             max-width: 600px;
-            margin: 0 auto 3rem;
+            margin: 1rem auto 1rem;
         }
         
         .code-highlight {
@@ -780,8 +787,9 @@
         }
 
         .stat-label {
-            font-size: 0.9rem;
-            color: #d1d5db;
+            font-size: 1rem;
+            font-weight: 900;
+            color: #ffffff;
         }
 
         .requirements-list {
@@ -793,7 +801,7 @@
             padding: 0.75rem 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
-            align-items: center;
+            align-items: center;    
         }
 
         .requirements-list li:last-child {
@@ -1417,7 +1425,23 @@
                 mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
             }
         }
-    </style>
+
+        .emphasis-headline-red {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #dfd001;
+            text-shadow: 0 0 10px rgba(255, 217, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .emphasis-headline-red {
+                font-size: 1.8rem;
+            }
+        }
+</style>
 </head>
 <body>
     <!-- Tło z grafiką -->
@@ -1431,15 +1455,15 @@
             </div>
 
             <h1 class="prize-amount" style="font-size: 3.5rem; margin-bottom: 0.5rem;">ŚWIĘTA Z CIOSEM</h1>
-            <p class="description">
-                Zarejestruj się z kodem <span class="code-highlight">CIOS</span> i odbierz świąteczne    bonusy
-            </p>
+            <div class="emphasis-headline-red">DLA 5 OSÓB ROZDANIE PO 2.000zł</div>
+
             
             <!-- Sekcja informacji o nagrodzie -->
+            <p class="description">
+                Zarejestruj się z kodem <span class="code-highlight">CIOS</span> i odbierz darmowe spiny <br> bez DEPOZYTU!
+            </p>
             <div>
-                <h3>NAGRODA: <span class="highlight">Dla 5 osób rozdanie po 2.000zł</span></h3>
-                
-                <div class="prize-details" style="margin-top: 25px;">
+                <div class="prize-details" style="">
                     <div class="prize-stats">
                         <div class="stat-item">
                             <div class="stat-value">5 osób</div>
@@ -1469,8 +1493,8 @@
                         <li>
                             <span class="requirement-icon">✓</span>
                             <div>
-                                <div class="requirement-text">Wyślij na Instagrama @mr_cios:</div>
-                                <div class="requirement-note">Hasło <strong>"GOTOWE"</strong> + Twój e-mail użyty przy rejestracji</div>
+                                <div class="requirement-text">Wyślij na Instagrama <a style="text-decoration: underline; color: #fff; font-weight: 900;" href="https://www.instagram.com/mr_cios/">@mr_cios:</a></div>
+                                <div class="requirement-note">Hasło <strong>"GOTOWE"</strong> + Twoje ID konta na Spinbetter</div>
                             </div>
                         </li>
                     </ul>
