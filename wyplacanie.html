@@ -103,6 +103,15 @@
             margin-right: auto;
         }
         
+        .warning-box {
+            background: #8f000034;
+            border-left: 3px solid #ff000081;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        
         .methods-grid {
             display: grid;
             grid-template-columns: repeat(1, 1fr);
@@ -121,8 +130,9 @@
             border-radius: 20px;
             overflow: hidden;
             border: 2px solid #d3e512;
-            background: rgba(19, 19, 19, 0.8);
+            background: rgb(19, 19, 19);
             padding: 2rem;
+            height: 100%;
         }
         
         .method-title {
@@ -140,20 +150,12 @@
             line-height: 1.6;
         }
         
-        .fee-info {
-            background: rgba(211, 229, 18, 0.1);
-            padding: 1rem;
-            border-radius: 8px;
+        .features-list {
             margin: 1rem 0;
-            border-left: 3px solid #d3e512;
-        }
-        
-        .steps-list {
-            margin: 1.5rem 0;
             padding-left: 1.5rem;
         }
         
-        .steps-list li {
+        .features-list li {
             margin-bottom: 0.5rem;
             line-height: 1.5;
         }
@@ -172,20 +174,6 @@
         
         .referral-link:hover {
             transform: scale(1.05);
-        }
-        
-        .warning-box {
-            background: rgba(214, 169, 93, 0.1);
-            border-left: 3px solid #d3e512;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 2rem 0;
-        }
-        
-        .warning-title {
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: #d3e512;
         }
         
         .disclaimer-box {
@@ -257,6 +245,24 @@
                 font-size: 0.875rem;
             }
         }
+
+        /* Alternatywna wersja z grubszymi paskami */
+        .candy-cane-border-thick {
+            border: 4px solid transparent;
+            background: 
+                linear-gradient(rgba(12, 12, 12, 1), rgba(12, 12, 12, 1)) padding-box,
+                repeating-linear-gradient(
+                    45deg,
+                    #ff0000 0%,
+                    #ff0000 20px,
+                    #ffffff 20px,
+                    #ffffff 40px
+                ) border-box;
+            box-shadow: 
+                0 0 25px rgba(255, 255, 255, 0.28),
+                0 0 50px rgba(255, 0, 0, 0.12),
+                inset 0 0 15px rgba(255, 255, 255, 0.15);
+        }
     </style>
 </head>
 <body>
@@ -267,7 +273,7 @@
         <!-- Sekcja główna -->
         <section class="instructions-container">
             <!-- Hero sekcja -->
-            <div class="hero-section">
+            <div class="hero-section candy-cane-border-thick">
                 <div class="hero-background">
                     <div class="hero-overlay"></div>
                 </div>
@@ -287,7 +293,7 @@
             <!-- Metody wypłat -->
             <div class="methods-grid">
                 <!-- ZEN -->
-                <div class="method-card">
+                <div class="method-card candy-cane-border-thick">
                     <h3 class="method-title">ZEN - najmniejsze fee na kartę</h3>
                     <p class="method-text">
                         Mając konto ZEN możesz wpłacić kryptowaluty na giełdę Binance lub ByBit, następnie sprzedać je do USDT/USDC i wymienić na giełdzie do PLN. 
@@ -299,7 +305,7 @@
                 </div>
                 
                 <!-- Revolut -->
-                <div class="method-card">
+                <div class="method-card candy-cane-border-thick">
                     <h3 class="method-title">Revolut</h3>
                     <p class="method-text">
                         Znany wszystkim Revolut oferuje również zamianę krypto na fiaty (czyli normalną walutę).
@@ -317,7 +323,7 @@
                 </div>
                 
                 <!-- Crypto.com -->
-                <div class="method-card">
+                <div class="method-card candy-cane-border-thick">
                     <h3 class="method-title">Crypto.com</h3>
                     <p class="method-text">
                         Zamawiacie kartę od nich, wpłacacie pieniądze do serwisu, a potem doładowywujecie sobie kartę pożądaną kwotą.
@@ -328,7 +334,7 @@
                 </div>
                 
                 <!-- Bitomaty -->
-                <div class="method-card">
+                <div class="method-card candy-cane-border-thick">
                     <h3 class="method-title">Bitomaty - najmniejsze fee do gotówki</h3>
                     <p class="method-text">
                         Dobrą opcją wypłaty jest też Bitomat - do 1000 EUR (czyli spokojnie do 1000 USD) w ramach jednego dnia bez żadnej weryfikacji wypłacicie.
@@ -350,7 +356,7 @@
                 </div>
                 
                 <!-- Cashify -->
-                <div class="method-card">
+                <div class="method-card candy-cane-border-thick">
                     <h3 class="method-title">Cashify</h3>
                     <p class="method-text">
                         Wizyta w placówce w wielu miastach - przy transakcjach do 1000 EUR nie trzeba przechodzić weryfikacji danych osobowych. 
@@ -366,7 +372,7 @@
             </div>
             
             <!-- Sekcja bezpiecznego wypłacania z kasyna -->
-            <div class="method-card">
+            <div class="method-card candy-cane-border-thick">
                 <h3 class="method-title">Jak bezpiecznie wypłacić kasę z kasyna?</h3>
                 <p class="method-text">
                     <strong>Najlepszy, najbezpieczniejszy sposób - krypto.</strong><br>
