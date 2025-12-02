@@ -1437,15 +1437,52 @@
         }
 
         @media (max-width: 768px) {
-            .emphasis-headline-red {
-                font-size: 1.8rem;
+            .mobile-top-logo {
+                opacity: 1;
+            }
+            .mobile-top-logo img {
+                width: 100%;
+                height: auto;
+                display: block;
             }
         }
+
+        @media (min-width: 768px) {
+            .mobile-top-logo {
+                opacity: 0;
+            }
+        }
+
+        .mobile-top-logo.hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+
+        .mobile-top-logo {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            z-index: 1000;
+            width: 160px;
+            height: auto;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            padding: 0.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
 </style>
 </head>
 <body>
     <!-- Tło z grafiką -->
     <div class="background-image"></div>
+
+    <div class="mobile-top-logo">
+        <img src="./spinbetter.png" alt="SpinBetter" />
+    </div>
     
     <div class="content-overlay">
         <!-- Sekcja główna -->
@@ -1671,5 +1708,34 @@
             Zanim skorzystasz z jakichkolwiek ofert przedstawionych na tej stronie, gorąco rekomendujemy zweryfikowanie legalności hazardu online w Twojej lokalizacji.
         </p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileLogo = document.querySelector('.mobile-top-logo');
+            let lastScrollTop = 0;
+            const scrollThreshold = 100; // Po jakim przesunięciu logo ma znikać (w pikselach)
+            
+            if (mobileLogo && window.innerWidth <= 768) {
+                window.addEventListener('scroll', function() {
+                    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                    
+                    if (scrollTop > scrollThreshold) {
+                        // Jeśli przewinęliśmy więcej niż threshold, ukrywamy logo
+                        mobileLogo.classList.add('hidden');
+                    } else {
+                        // Jeśli jesteśmy blisko góry, pokazujemy logo
+                        mobileLogo.classList.remove('hidden');
+                    }
+                    
+                    lastScrollTop = scrollTop;
+                });
+                
+                // Opcjonalnie: ukryj logo po kliknięciu (jeśli chcesz)
+                mobileLogo.addEventListener('click', function() {
+                    this.classList.add('hidden');
+                });
+            }
+        });
+        </script>
 </body>
 </html>
