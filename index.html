@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ŚWIĘTA Z CIOSEM - NAJLEPSZE BONUSY POWITALNE</title>
+    <title>NOWY ROK Z CIOSEM - NAJLEPSZE BONUSY POWITALNE</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./favicon.png">
 
     <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="ŚWIĘTA Z CIOSEM - WYGRAJ 10.000zŁ!">
+    <meta property="og:title" content="NOWY ROK Z CIOSEM - WYGRAJ 10.000zŁ!">
     <meta property="og:description" content="Zarejestruj się z kodem CIOS, zrób depozyt i wygraj 1.000zł! Co 2 dni losujemy zwycięzcę.">
     <meta property="og:image" content="./favicon.png">
     <meta property="og:type" content="website">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -37,7 +39,7 @@
             height: 100%;
             background-image: url('./background.webp');
             background-size: cover;
-            background-color: rgb(5, 5, 5);
+            background-color: rgb(0, 0, 0);
             background-position: center;
             background-repeat: no-repeat;
             z-index: -2;
@@ -68,7 +70,7 @@
             width: 44px;
             height: 44px;
             border-radius: 50%;
-            background: linear-gradient(to bottom right, #8b0404, black);
+            background: linear-gradient(to bottom right, #b8860b, black);
             padding: 2px;
         }
         
@@ -99,16 +101,16 @@
             text-align: center;
         }
         
-        .prize-amount {
-            font-family: 'Montserrat', sans-serif;
+           .prize-amount {
+            font-family: 'Tilt Neon', sans-serif;
             font-weight: 900;
             font-size: 3.2rem;
-            background: linear-gradient(to right, #9c9c9c, #747474, #4e4e4e);
+            background: linear-gradient(to right, #aaaaaa, #ffffff, #808080);
             background-size: 200% 100%;
             -webkit-background-clip: text;
             background-clip: text;
-            color: #fffffff0;
-            text-shadow: 0 0 30px #a30606A0;
+            color: transparent;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
             margin-bottom: 1rem;
         }
         
@@ -127,11 +129,11 @@
         }
         
         .code-highlight {
-            background: #a3060624;
+            background: rgba(184, 134, 11, 0.24);
             padding: 0.25rem 0.5rem;
             border-radius: 4px;
             font-weight: bold;
-            color: #a30606;
+            color: #b8860b;
         }
         
         .partners {
@@ -150,7 +152,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
             font-size: 3rem;
-            background: linear-gradient(to right, #a30606, #910606);
+            background: linear-gradient(to right, #b8860b, #daa520);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -168,13 +170,13 @@
         .divider-line {
             flex: 1;
             height: 2px;
-            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+            background: linear-gradient(to right, transparent, rgba(184, 134, 11, 0.2), rgba(184, 134, 11, 0.5));
         }
 
         .divider-line-reverse {
             flex: 1;
             height: 2px;
-            background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+            background: linear-gradient(to left, transparent, rgba(184, 134, 11, 0.2), rgba(184, 134, 11, 0.5));
         }
         
         .divider-center {
@@ -188,14 +190,19 @@
             width: 4px;
             height: 4px;
             border-radius: 50%;
-            background: #6b7280;
+            background: #b8ab8b;
         }
         
         .divider-dot-main {
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: #a30606;
+
+        }
+
+        .divider-dot-main>p {
+            margin-top: -0.45rem;
+            margin-left: -0.20rem;
         }
         
         .buttons {
@@ -218,13 +225,13 @@
         }
         
         .btn-primary {
-            background: linear-gradient(to right, #910606, #a30606);
+            background: linear-gradient(to right, #daa520, #b8860b);
             color: black;
             border: none;
         }
         
         .btn-primary:hover {
-            background: linear-gradient(to right, #970606, #a30606);
+            background: linear-gradient(to right, #e0b040, #b8860b);
             transform: scale(1.05);
         }
         
@@ -280,7 +287,7 @@
         
         .warning-box {
             background: rgba(214, 169, 93, 0.1);
-            border-left: 2px solid #a30606;
+            border-left: 2px solid #b8860b;
             padding: 1rem;
             border-radius: 8px;
             margin-bottom: 1.5rem;
@@ -289,7 +296,7 @@
         }
         
         .warning-icon {
-            color: #a30606;
+            color: #b8860b;
             flex-shrink: 0;
         }
         
@@ -394,25 +401,13 @@
         }
 
         .magical-text {
-            background: linear-gradient(to right, #a30606, #960606);
+            background: linear-gradient(to right, #ffd700, #ffed4e, #ffd700);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
             font-weight: 900;
             position: relative;
-        }
-
-        .magical-text::before {
-            content: "REKOMENDUJE";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to right, #a30606, #970505);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            filter: blur(4px);
-            opacity: 0.4;
-            animation: pulse 3s ease-in-out infinite;
+            text-shadow: 0 0 10px rgba(184, 134, 11, 0.7);
         }
 
         @keyframes pulse {
@@ -433,7 +428,13 @@
             width: 450px;
             max-width: 95%;
             overflow: hidden;
-            border: 2px solid #a30606;
+            box-shadow: 
+                0 0 15px rgba(255, 215, 0, 0.5),
+                0 0 30px rgba(255, 221, 85, 0.3),
+                0 0 45px rgba(255, 235, 150, 0.2),
+                inset 0 0 20px rgba(255, 245, 200, 0.1);
+            animation: ice-compact-glow 3s ease-in-out infinite alternate;
+            border: 1px solid rgba(255, 215, 0, 0.4);
             transform: rotate(-1deg);
             transition: transform 0.3s ease;
         }
@@ -478,6 +479,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 0.5rem;
+            margin-top: 1rem;
         }
 
         @media (min-width: 768px) {
@@ -494,12 +496,12 @@
 
         @media (min-width: 768px) {
             .casino-logo img {
-                width: 70%;
+                width: 55%;
             }
         }
 
         .bonus-badge {
-            background: linear-gradient(to right, #920707, #a30606);
+            background: linear-gradient(to right, #b8860b, #ffd700, #daa520, #ffd700);
             border-radius: 9999px;
             text-align: center;
             padding: 0.25rem 0.75rem;
@@ -516,7 +518,7 @@
 
         .bonus-badge span {
             font-weight: 800;
-            color: #fff;
+            color: #000;
             font-family: 'Montserrat', sans-serif;
         }
 
@@ -597,7 +599,7 @@
 
         .pros-list svg {
             margin-right: 0.5rem;
-            color: #a30606;
+            color: #ffd700;
             flex-shrink: 0;
         }
 
@@ -627,7 +629,7 @@
         }
 
         .bonus-button {
-            background: linear-gradient(to right, #920606, #a30606);
+            background: linear-gradient(to right, #b8860b, #ffd700, #daa520, #ffd700);
             border-radius: 8px;
             padding: 0.5rem 1rem;
             display: inline-block;
@@ -644,25 +646,26 @@
         }
 
         .bonus-button:hover {
-            background: linear-gradient(to right, #a80606, #9c0505);
-            transform: scale(1.05);
+            transform: scale(1.1);
+            box-shadow: 0 0 5px rgba(255, 215, 0, 0.7);
         }
 
         .bonus-button span {
             font-weight: 800;
-            color: #fff;
+            color: #000;
             font-family: 'Montserrat', sans-serif;
             font-size: 1.25rem;
+            text-shadow: 0 0 5px #ffffff60;
         }
         
         /* Nowy footer */
         .footer-disclaimer {
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(10px);
-            border-top: 1px solid #c0c0c060;
+            border-top: 1px solid #ffd70060;
             padding: 1.5rem 2rem;
             text-align: center;
-            box-shadow: 0 -5px 20px #ececec24;
+            box-shadow: 0 -5px 20px rgba(255, 215, 0, 0.1);
         }
         
         .footer-text {
@@ -674,7 +677,7 @@
         }
         
         .footer-text strong {
-            color: #960606;
+            color: #b8860b;
             font-weight: 600;
         }
         
@@ -684,17 +687,17 @@
             height: 250px;
             border-radius: 50%;
             background: linear-gradient(45deg, 
-                #ff0000 0%, 
-                #ff6b6b 25%, 
-                #ffd93d 50%, 
-                #6bcf7f 75%, 
-                #4d96ff 100%);
+                #ffd700 0%, 
+                #ffed4e 25%, 
+                #daa520 50%, 
+                #b8860b 75%, 
+                #8b7500 100%);
             margin: 2rem auto;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            box-shadow: 0 0 50px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 0 50px rgba(255, 215, 0, 0.3);
             animation: gradient-rotate 10s linear infinite;
         }
 
@@ -715,11 +718,11 @@
             font-weight: 900;
             font-size: 2rem;
             background: linear-gradient(45deg, 
-                #ff0000 0%, 
-                #ff6b6b 25%, 
-                #ffd93d 50%, 
-                #6bcf7f 75%, 
-                #4d96ff 100%);
+                #ffd700 0%, 
+                #ffed4e 25%, 
+                #daa520 50%, 
+                #b8860b 75%, 
+                #8b7500 100%);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -740,8 +743,8 @@
             padding: 1.5rem;
             max-width: 800px;
             margin: 2rem auto;
-            border-left: 4px solid #a30606;
-            box-shadow: 0 4px 20px rgba(163, 6, 6, 0.2);
+            border-left: 4px solid #b8860b;
+            box-shadow: 0 4px 20px rgba(184, 134, 11, 0.2);
         }
 
         .prize-info h3 {
@@ -754,11 +757,11 @@
         }
 
         .prize-info h3 .highlight {
-            color: #a30606;
+            color: #b8860b;
         }
 
         .prize-details {
-            background: rgba(163, 6, 6, 0.1);
+            background: rgba(184, 134, 11, 0);
             border-radius: 10px;
             padding: 1.5rem;
             margin-bottom: 1.5rem;
@@ -782,7 +785,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 800;
             font-size: 1.5rem;
-            color: #a30606;
+            color: #b8860b;
             margin-bottom: 0.25rem;
         }
 
@@ -809,7 +812,7 @@
         }
 
         .requirement-icon {
-            color: #a30606;
+            color: #b8860b;
             margin-right: 1rem;
             font-weight: bold;
         }
@@ -916,8 +919,8 @@
             width: 200px;
             height: 200px;
             border-radius: 50%;
-            border: 1px solid #a30606;
-            box-shadow: 0 0 20px #a3060650;
+            border: 1px solid #b8860b;
+            box-shadow: 0 0 20px rgba(184, 134, 11, 0.5);
             overflow: hidden;
             margin-bottom: 1rem;
             margin-top: 2rem;
@@ -933,7 +936,7 @@
             bottom: -2px;
             border-radius: 50%;
             border: 2px solid transparent;
-            background: linear-gradient(45deg, #8a0202, #a30606, #a30606);
+            background: linear-gradient(45deg, #8b7500, #b8860b, #daa520);
             background-size: 200% 200%;
             animation: neon-glow 3s ease-in-out infinite;
             z-index: -1;
@@ -1038,7 +1041,7 @@
             position: absolute;
             inset: 0;
             z-index: 0;
-            background-image: url('./background.webp');
+            /* background-image: url('./background.webp'); */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -1067,7 +1070,7 @@
         }
 
         .instructions-gradient {
-            background: linear-gradient(to right, #920505, #a30606);
+            background: linear-gradient(to right, #daa520, #b8860b);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -1111,8 +1114,8 @@
 
         .instruction-card.active:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px #ffffff18;
-            border-color: #ffffff24;
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.24);
         }
 
         .instruction-card.disabled {
@@ -1123,7 +1126,7 @@
             position: absolute;
             top: 1rem;
             left: 1rem;
-            background: #9c0606;
+            background: #b8860b;
             border-radius: 50%;
             padding: 0.25rem;
             display: flex;
@@ -1174,14 +1177,14 @@
 
         /* Wersja z super białym kolorem i lepszym kontrastem */
         .candy-cane-text {
-            color: #ff0000;
+            color: #b8860b;
             background: linear-gradient(
                 45deg,
-                #ff0000 25%,
+                #b8860b 25%,
                 #fffff0 25%,
                 #fffff0 50%,
-                #ff0000 50%,
-                #ff0000 75%,
+                #b8860b 50%,
+                #b8860b 75%,
                 #fffff0 75%,
                 #fffff0
             );
@@ -1195,7 +1198,7 @@
             filter: contrast(1.2) brightness(1.1);
             text-shadow: 
                 0 0 8px rgba(255, 255, 240, 0.3),
-                0 0 16px rgba(255, 0, 0, 0.3);
+                0 0 16px rgba(184, 134, 11, 0.3);
         }
 
         /* Candy cane border dla casino-card */
@@ -1207,28 +1210,28 @@
                 linear-gradient(rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.9)) padding-box,
                 repeating-linear-gradient(
                     45deg,
-                    #ff0000 0%,
-                    #ff0000 12.5%,
+                    #b8860b 0%,
+                    #b8860b 12.5%,
                     #ffffff 12.5%,
                     #ffffff 25%,
-                    #ff0000 25%,
-                    #ff0000 37.5%,
+                    #b8860b 25%,
+                    #b8860b 37.5%,
                     #ffffff 37.5%,
                     #ffffff 50%,
-                    #ff0000 50%,
-                    #ff0000 62.5%,
+                    #b8860b 50%,
+                    #b8860b 62.5%,
                     #ffffff 62.5%,
                     #ffffff 75%,
-                    #ff0000 75%,
-                    #ff0000 87.5%,
+                    #b8860b 75%,
+                    #b8860b 87.5%,
                     #ffffff 87.5%,
                     #ffffff 100%
                 ) border-box;
             background-size: 40px 40px;
             animation: candy-cane-rotate 20s linear infinite;
             box-shadow: 
-                0 0 20px rgba(255, 0, 0, 0.3),
-                0 0 40px rgba(255, 0, 0, 0.2),
+                0 0 20px rgba(184, 134, 11, 0.3),
+                0 0 40px rgba(184, 134, 11, 0.2),
                 inset 0 0 20px rgba(255, 255, 255, 0.1);
         }
 
@@ -1239,14 +1242,14 @@
                 linear-gradient(rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.9)) padding-box,
                 repeating-linear-gradient(
                     45deg,
-                    #ff0000 0%,
-                    #ff0000 20px,
+                    #b8860b 0%,
+                    #b8860b 20px,
                     #ffffff 20px,
                     #ffffff 40px
                 ) border-box;
             box-shadow: 
                 0 0 25px rgba(255, 255, 255, 0.28),
-                0 0 50px rgba(255, 0, 0, 0.12),
+                0 0 50px rgba(184, 134, 11, 0.12),
                 inset 0 0 15px rgba(255, 255, 255, 0.15);
         }
 
@@ -1257,14 +1260,14 @@
                 linear-gradient(rgba(12, 12, 12, 0.95), rgba(12, 12, 12, 0.95)) padding-box,
                 repeating-linear-gradient(
                     45deg,
-                    #ff0000 0%,
-                    #ff0000 15px,
+                    #b8860b 0%,
+                    #b8860b 15px,
                     #ffffcc 15px,
                     #ffffcc 30px
                 ) border-box;
             box-shadow: 
-                0 0 30px rgba(255, 0, 0, 0.5),
-                0 0 60px rgba(255, 0, 0, 0.3),
+                0 0 30px rgba(184, 134, 11, 0.5),
+                0 0 60px rgba(184, 134, 11, 0.3),
                 0 0 90px rgba(255, 255, 255, 0.1),
                 inset 0 0 25px rgba(255, 255, 255, 0.2);
             animation: candy-cane-glow 3s ease-in-out infinite alternate;
@@ -1277,8 +1280,8 @@
                 linear-gradient(rgba(12, 12, 12, 0.9), rgba(12, 12, 12, 0.9)) padding-box,
                 repeating-linear-gradient(
                     45deg,
-                    #ff0000,
-                    #ff0000 10px,
+                    #b8860b,
+                    #b8860b 10px,
                     #ffffff 10px,
                     #ffffff 20px
                 ) border-box;
@@ -1298,14 +1301,14 @@
         @keyframes candy-cane-glow {
             0% {
                 box-shadow: 
-                    0 0 20px rgba(255, 0, 0, 0.4),
-                    0 0 40px rgba(255, 0, 0, 0.2),
+                    0 0 20px rgba(184, 134, 11, 0.4),
+                    0 0 40px rgba(184, 134, 11, 0.2),
                     inset 0 0 15px rgba(255, 255, 255, 0.1);
             }
             100% {
                 box-shadow: 
-                    0 0 30px rgba(255, 0, 0, 0.6),
-                    0 0 60px rgba(255, 0, 0, 0.4),
+                    0 0 30px rgba(184, 134, 11, 0.6),
+                    0 0 60px rgba(184, 134, 11, 0.4),
                     0 0 90px rgba(255, 255, 255, 0.2),
                     inset 0 0 25px rgba(255, 255, 255, 0.3);
             }
@@ -1314,7 +1317,7 @@
         /* Wersja z czerwonymi i białymi kulami w rogach */
         .casino-card.candy-cane-border-dots {
             position: relative;
-            border: 2px solid #ff0000;
+            border: 2px solid #b8860b;
             border-radius: 15px;
             overflow: visible;
         }
@@ -1326,7 +1329,7 @@
             width: 12px;
             height: 12px;
             border-radius: 50%;
-            background: #ff0000;
+            background: #b8860b;
             z-index: 2;
         }
 
@@ -1335,8 +1338,8 @@
             left: -6px;
             box-shadow: 
                 0 0 0 2px #ffffff,
-                0 0 0 4px #ff0000,
-                0 0 10px rgba(255, 0, 0, 0.5);
+                0 0 0 4px #b8860b,
+                0 0 10px rgba(184, 134, 11, 0.5);
         }
 
         .casino-card.candy-cane-border-dots::after {
@@ -1344,8 +1347,8 @@
             right: -6px;
             box-shadow: 
                 0 0 0 2px #ffffff,
-                0 0 0 4px #ff0000,
-                0 0 10px rgba(255, 0, 0, 0.5);
+                0 0 0 4px #b8860b,
+                0 0 10px rgba(184, 134, 11, 0.5);
         }
 
         .casino-card.candy-cane-border-dots .corner-dot {
@@ -1356,7 +1359,7 @@
             background: #ffffff;
             z-index: 2;
             box-shadow: 
-                0 0 0 2px #ff0000,
+                0 0 0 2px #b8860b,
                 0 0 0 4px #ffffff,
                 0 0 10px rgba(255, 255, 255, 0.5);
         }
@@ -1379,28 +1382,25 @@
             width: 100%;
             /* Ujemny margines sprawia, że tekst poniżej nachodzi na wygaszoną część zdjęcia,
             tworząc efekt głębi jak na zdjęciu referencyjnym. Dostosuj wartość w razie potrzeby. */
-            margin-bottom: -4rem;
+            margin-bottom: -3rem;
             margin-top: 1rem;
             position: relative;
             z-index: 0; /* Zdjęcie pod spodem */
 
-            -webkit-mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.5) 30%, black 60%);
-            mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.5) 30%, black 60%);
         }
 
         .santa-fade-image {
             width: 100%;
             /* Dostosuj max-width zależnie od tego, jak duże ma być zdjęcie postaci */
-            max-width: 400px;
+            max-width: 215px;
             height: auto;
             display: block;
             
             /* Opcjonalnie: Dodaje subtelny cień, aby postać lepiej "siedziała" w tle */
             filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.5));
 
-            margin-bottom: -120px;
-            -webkit-mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.5) 30%, black 60%);
-            mask-image: linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.5) 30%, black 60%);
+            margin-bottom: 10px;
+
         }
 
         /* Modyfikacja istniejącej klasy tytułu, aby na pewno był NAD zdjęciem */
@@ -1408,34 +1408,47 @@
             position: relative;
             z-index: 2;
             /* Opcjonalnie: dodanie lekkiego cienia pod tekstem dla lepszej czytelności na tle zdjęcia */
-            text-shadow: 0 5px 15px rgba(0,0,0,0.8);
         }
 
         /* Wersja mobilna */
         @media (max-width: 768px) {
             .santa-fade-container {
-                margin-bottom: -2.5rem;
+                margin-bottom: -3rem;
                 margin-top: 0.5rem;
             }
             
             .santa-fade-image {
                 max-width: 380px; /* Mniejsze zdjęcie na telefonach */
                 /* Na mniejszych ekranach zanikanie zaczyna się nieco później */
-                -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
-                mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
             }
         }
 
         .emphasis-headline-red {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: #dfd001;
-            text-shadow: 0 0 10px rgba(255, 217, 0, 0.5);
+            font-weight: 800;
+            font-size: 1.8rem;
+            background: linear-gradient(to right, #ffd700, #ffed4e, #ffd700);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(184, 134, 11, 0.7);
+            margin-bottom: 1rem; 
         }
 
+        .emphasis-headline-yellow {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            background: linear-gradient(to right, #ffd700ff, #ffed4eff, #daa520ff);
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(184, 134, 11, 0.7);
+            margin-bottom: 1rem; 
+        }
+        
         @media (max-width: 768px) {
             .mobile-top-logo {
                 opacity: 1;
@@ -1474,11 +1487,558 @@
             transition: transform 0.3s ease, opacity 0.3s ease;
         }
 
-</style>
+        .neonText {
+            color: #eee;
+            text-shadow:
+                0 0 7px #eee,
+                0 0 21px #5271ff,
+                0 0 42px #5271ff;
+        }
+        /* Kompaktowa lodowa tabela informacji - zoptymalizowana mobilnie */
+        .neon-info-table.ice-compact {
+            width: 100%;
+            max-width: 700px;
+            margin: 1.5rem auto;
+            background: rgba(20, 15, 0, 0.95); /* Czarne tło ze złotym odcieniem */
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            padding: 2px;
+            box-shadow: 
+                0 0 15px rgba(255, 215, 0, 0.5),
+                0 0 30px rgba(255, 221, 85, 0.3),
+                0 0 45px rgba(255, 235, 150, 0.2),
+                inset 0 0 20px rgba(255, 245, 200, 0.1);
+            animation: ice-compact-glow 3s ease-in-out infinite alternate;
+            border: 1px solid rgba(255, 215, 0, 0.4);
+        }
+
+        /* Neonowe dekoracje - rogi */
+        .neon-info-table.ice-compact::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            border-radius: 19px;
+            background: linear-gradient(45deg, 
+                #b8860b, 
+                #daa520, 
+                #ffed4e,
+                #daa520,
+                #b8860b);
+            background-size: 300% 300%;
+            z-index: -1;
+            animation: ice-border-rotate 3s linear infinite;
+            opacity: 0.8;
+        }
+
+        /* Neonowe narożniki - dekoracja 1 */
+        .neon-corner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            z-index: 2;
+        }
+
+        /* Neonowe linie boczne */
+        .neon-side-line {
+            position: absolute;
+            background: linear-gradient(to bottom, 
+                transparent, 
+                #daa520, 
+                #ffed4e, 
+                #daa520, 
+                transparent);
+            width: 2px;
+            height: 60%;
+            opacity: 0.7;
+            animation: neon-side-glow 2s ease-in-out infinite alternate;
+        }
+
+        .neon-side-line.left {
+            left: 10px;
+            top: 20%;
+            box-shadow: 
+                -3px 0 10px rgba(184, 134, 11, 0.5),
+                -6px 0 15px rgba(218, 165, 32, 0.3);
+        }
+
+        .neon-side-line.right {
+            right: 10px;
+            top: 20%;
+            box-shadow: 
+                3px 0 10px rgba(184, 134, 11, 0.5),
+                6px 0 15px rgba(218, 165, 32, 0.3);
+        }
+
+        /* Główne wnętrze tabeli */
+        .neon-info-table.ice-compact .table-inner {
+            background: linear-gradient(135deg, 
+                rgba(20, 15, 0, 0.95) 0%,
+                rgba(25, 20, 0, 0.95) 100%);
+            border-radius: 16px;
+            padding: 1.2rem;
+            position: relative;
+            z-index: 1;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        /* Nagłówek */
+        .neon-info-table.ice-compact .table-header {
+            text-align: center;
+            margin-bottom: 1rem;
+            padding-bottom: 0.8rem;
+            position: relative;
+        }
+
+        .neon-info-table.ice-compact .table-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 15%;
+            right: 15%;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                #daa520, 
+                #ffed4e,
+                #daa520,
+                transparent);
+            border-radius: 1px;
+            box-shadow: 0 0 10px rgba(184, 134, 11, 0.5);
+        }
+        .neon-info-table.ice-compact .table-title {
+            font-family: 'Tilt Neon', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+            text-shadow: 
+                0 0 8px rgba(255, 215, 0, 0.7),
+                0 0 15px rgba(255, 221, 85, 0.4);
+            letter-spacing: 0.5px;
+        }
+
+        .neon-info-table.ice-compact .table-subtitle {
+            font-family: 'Tilt Neon', sans-serif;
+            font-size: 0.9rem;
+            color: #fff8cc;
+            opacity: 0.9;
+        }
+
+        /* Kompaktowy grid - OPTYMALIZACJA MOBILNA */
+        .neon-info-table.ice-compact .info-grid-compact {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        /* MOBILE: Jeden kolumna, mniejsze wymiary */
+        @media (max-width: 768px) {
+            .neon-info-table.ice-compact {
+                max-width: 95%;
+                margin: 1rem auto;
+                padding: 1px;
+            }
+            
+            .neon-info-table.ice-compact .table-inner {
+                padding: 0.8rem;
+            }
+            
+            .neon-info-table.ice-compact .info-grid-compact {
+                grid-template-columns: 1fr;
+                gap: 0.6rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .neon-info-table.ice-compact .table-title {
+                font-size: 1.3rem;
+                margin-bottom: 0.2rem;
+            }
+            
+            .neon-info-table.ice-compact .table-subtitle {
+                font-size: 0.8rem;
+            }
+            
+            /* Ukryj niektóre dekoracje na mobile */
+            .neon-side-line {
+                display: none;
+            }
+            
+            .neon-corner {
+                width: 15px;
+                height: 15px;
+            }
+            
+            .neon-dot {
+                width: 4px;
+                height: 4px;
+            }
+            
+            .neon-corner.tl, .neon-dot.tl {
+                top: 4px;
+                left: 4px;
+            }
+            
+            .neon-corner.tr, .neon-dot.tr {
+                top: 4px;
+                right: 4px;
+            }
+            
+            .neon-corner.bl, .neon-dot.bl {
+                bottom: 4px;
+                left: 4px;
+            }
+            
+            .neon-corner.br, .neon-dot.br {
+                bottom: 4px;
+                right: 4px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .neon-info-table.ice-compact .table-title {
+                font-size: 1.1rem;
+            }
+            
+            .neon-info-table.ice-compact .table-subtitle {
+                font-size: 0.75rem;
+            }
+            
+            .neon-info-table.ice-compact .table-inner {
+                padding: 0.6rem;
+            }
+        }
+
+        /* Elementy gridu */
+        .neon-info-table.ice-compact .info-item-compact {
+            background: rgba(25, 20, 0, 0.8);
+            border-radius: 8px;
+            padding: 0.8rem;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .info-item-compact-wide {
+            grid-column: span 2;
+        }
+
+        .neon-info-table.ice-compact .info-item-compact:hover {
+            border-color: rgba(255, 235, 150, 0.6);
+            box-shadow: 
+                0 0 12px rgba(255, 215, 0, 0.3),
+                inset 0 0 8px rgba(255, 245, 200, 0.1);
+        }
+
+        /* Neonowe podświetlenie elementów */
+        .neon-info-table.ice-compact .info-item-compact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, 
+                #e6d8c3, 
+                #ffffff,
+                #e6d8c3);
+            opacity: 0.9;
+            border-radius: 1px 1px 0 0;
+        }
+
+        /* Teksty w gridzie */
+        .neon-info-table.ice-compact .info-label-compact {
+            font-family: 'Tilt Neon', sans-serif;
+            font-size: 0.75rem;
+            color: #ffd966;
+            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            font-weight: 600;
+        }
+
+        .neon-info-table.ice-compact .info-value-compact {
+            font-family: 'Tilt Neon', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
+            text-shadow: 0 0 6px rgba(255, 215, 0, 0.5);
+        }
+
+        .neon-info-table.ice-compact .info-description-compact {
+            font-family: 'Tilt Neon', sans-serif;
+            font-size: 0.75rem;
+            color: #ffedaacc;
+            line-height: 1.2;
+        }
+
+        /* Sekcja wymagań */
+        .neon-info-table.ice-compact .requirements-compact {
+            margin-top: 1rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid rgba(255, 215, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .neon-info-table.ice-compact .requirements-compact {
+                margin-top: 0.8rem;
+                padding-top: 0.6rem;
+            }
+        }
+
+        .neon-info-table.ice-compact .requirements-title-compact {
+            font-family: 'Tilt Neon', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 0.8rem;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .neon-info-table.ice-compact .requirements-title-compact {
+                font-size: 0.9rem;
+                margin-bottom: 0.6rem;
+            }
+        }
+
+        .neon-info-table.ice-compact .requirements-list-compact {
+            list-style: none;
+            padding: 0;
+        }
+
+        .neon-info-table.ice-compact .requirement-item-compact {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.6rem;
+            padding: 0.6rem;
+            background: rgba(40, 30, 0, 0.7);
+            border-radius: 6px;
+            border-left: 3px solid #e6d8c3;
+        }
+
+        @media (max-width: 768px) {
+            .neon-info-table.ice-compact .requirement-item-compact {
+                margin-bottom: 0.5rem;
+                padding: 0.5rem;
+            }
+        }
+
+        .neon-info-table.ice-compact .requirement-number-compact {
+            min-width: 22px;
+            height: 22px;
+            background: rgba(255, 215, 0, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 0.6rem;
+            font-family: 'Tilt Neon', sans-serif;
+            font-weight: 700;
+            color: #daa520;
+            font-size: 0.8rem;
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            flex-shrink: 0;
+        }
+
+        .neon-info-table.ice-compact .requirement-content-compact {
+            flex: 1;
+        }
+
+        .neon-info-table.ice-compact .requirement-text-compact {
+            font-family: 'Tilt Neon', sans-serif;
+            font-size: 0.8rem;
+            color: #ffffff;
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+        }
+
+        @media (max-width: 768px) {
+            .neon-info-table.ice-compact .requirement-text-compact {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* Kompaktowa stopka */
+        .neon-info-table.ice-compact .footer-note-compact {
+            font-family: 'Tilt Neon', sans-serif;
+            font-size: 0.75rem;
+            color: #ffe6b3;
+            background: rgba(200, 150, 0, 0.15);
+            padding: 0.6rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            line-height: 1.3;
+        }
+
+        @media (max-width: 768px) {
+            .neon-info-table.ice-compact .requirement-note-compact {
+                font-size: 0.65rem;
+            }
+        }
+
+        /* Kompaktowa stopka */
+        .neon-info-table.ice-compact .table-footer-compact {
+            margin-top: 1rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid rgba(180, 135, 0, 0.3);
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .neon-info-table.ice-compact .table-footer-compact {
+                margin-top: 0.8rem;
+                padding-top: 0.6rem;
+            }
+        }
+
+        /* Kompaktowa stopka */
+        .neon-info-table.ice-compact .footer-note-compact {
+            font-family: 'Tilt Neon', sans-serif;
+            font-size: 0.75rem;
+            color: #ffe6b3;
+            background: rgba(200, 150, 0, 0.15);
+            padding: 0.6rem;
+            border-radius: 6px;
+            border: 1px solid rgba(255, 215, 0, 0.25);
+            line-height: 1.3;
+        }
+
+        @media (max-width: 768px) {
+            .neon-info-table.ice-compact .footer-note-compact {
+                font-size: 0.7rem;
+                padding: 0.5rem;
+            }
+        }
+
+        .neon-info-table.ice-compact .footer-note-compact strong {
+            color: #daa520;
+            font-weight: 700;
+        }
+
+        /* Lodowe kody (kompaktowe) */
+        .ice-code-compact {
+            display: inline-block;
+            padding: 0.1rem 0.4rem;
+            background: rgba(255, 215, 0, 0.15);
+            border-radius: 4px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: #daa520;
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin: 0 0.1rem;
+            text-shadow: 0 0 4px rgba(255, 215, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .ice-code-compact {
+                font-size: 0.75rem;
+                padding: 0.05rem 0.3rem;
+            }
+        }
+
+        /* Animacje */
+        @keyframes ice-compact-glow {
+            0% {
+                box-shadow: 
+                    0 0 10px rgba(255, 215, 0, 0.4),
+                    0 0 25px rgba(255, 221, 85, 0.2),
+                    0 0 40px rgba(255, 235, 150, 0.1),
+                    inset 0 0 15px rgba(255, 245, 200, 0.05);
+            }
+            100% {
+                box-shadow: 
+                    0 0 15px rgba(255, 215, 0, 0.6),
+                    0 0 35px rgba(255, 221, 85, 0.3),
+                    0 0 55px rgba(255, 235, 150, 0.2),
+                    inset 0 0 20px rgba(255, 245, 200, 0.1);
+            }
+        }
+
+        @keyframes ice-border-rotate {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes neon-side-glow {
+            0% {
+                opacity: 0.4;
+                box-shadow: 
+                    -3px 0 8px rgba(184, 134, 11, 0.3),
+                    -6px 0 12px rgba(218, 165, 32, 0.2);
+            }
+            100% {
+                opacity: 0.8;
+                box-shadow: 
+                    -3px 0 12px rgba(184, 134, 11, 0.6),
+                    -6px 0 20px rgba(218, 165, 32, 0.4);
+            }
+        }
+
+        /* customizable snowflake styling */
+        .snowflake {
+        color: #fff;
+        font-size: 1em;
+        font-family: Arial, sans-serif;
+        text-shadow: 0 0 5px #000;
+        }
+        
+        .snowflake,.snowflake .inner{animation-iteration-count:infinite;animation-play-state:running}@keyframes snowflakes-fall{0%{transform:translateY(0)}100%{transform:translateY(110vh)}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;user-select:none;cursor:default;pointer-events:none;animation-name:snowflakes-shake;animation-duration:3s;animation-timing-function:ease-in-out}.snowflake .inner{animation-duration:10s;animation-name:snowflakes-fall;animation-timing-function:linear}.snowflake:nth-of-type(0){left:1%;animation-delay:0s}.snowflake:nth-of-type(0) .inner{animation-delay:0s}.snowflake:first-of-type{left:10%;animation-delay:1s}.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}.snowflake:nth-of-type(3){left:30%;animation-delay:2s}.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}.snowflake:nth-of-type(4){left:40%;animation-delay:2s}.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}.snowflake:nth-of-type(5){left:50%;animation-delay:3s}.snowflake:nth-of-type(5) .inner{animation-delay:8s}.snowflake:nth-of-type(6){left:60%;animation-delay:2s}.snowflake:nth-of-type(7){left:70%;animation-delay:1s}.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}.snowflake:nth-of-type(8){left:80%;animation-delay:0s}.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}.snowflake:nth-of-type(9) .inner{animation-delay:3s}.snowflake:nth-of-type(10){left:25%;animation-delay:0s}.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+    </style>
 </head>
 <body>
     <!-- Tło z grafiką -->
-    <div class="background-image"></div>
+    <div class="background-image">      
+    </div>
+
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+        <div class="snowflake">
+            <div class="inner">❅</div>
+        </div>
+    </div>
 
     <div class="mobile-top-logo">
         <img src="./spinbetter.png" alt="SpinBetter" />
@@ -1491,88 +2051,67 @@
                 <img src="./pfp2.png" alt="Święta z Ciosem" class="santa-fade-image">
             </div>
 
-            <h1 class="prize-amount" style="font-size: 3.5rem; margin-bottom: 0.5rem;">ŚWIĘTA Z CIOSEM</h1>
-            <div class="emphasis-headline-red">DLA 10 OSÓB ROZDANIE PO 1.000zł</div>
+            <h1 class="prize-amount" style="font-size: 2.9rem; margin-bottom: 0.5rem;">NOWOROCZNE ROZDANIE Z CIOSEM</h1>
+            <div class="emphasis-headline-red">CODZIENNIE 10 OSÓB ZGARNIA BLIKA</div>
+            <div class="emphasis-headline-yellow" style="font-size: 1rem; margin-top: -1rem;">(ZGARNIJ NAWET DO 1000ZŁ)</div>
+            
+            <!-- informacje -->
+            <!-- Kompaktowa lodowa tabela z neonowymi dekoracjami -->
+            <div class="neon-info-table ice-compact">
+                <!-- Neonowe dekoracje -->
 
-            
-            <!-- Sekcja informacji o nagrodzie -->
-            <p class="description">
-                Zarejestruj się z kodem <span class="code-highlight">CIOS</span> i odbierz darmowe spiny <br> bez DEPOZYTU!
-            </p>
-            <div>
-                <div class="prize-details" style="">
-                    <div class="prize-stats">
-                        <div class="stat-item">
-                            <div class="stat-value">10 osób</div>
-                            <div class="stat-label">Nagrody po 1.000zł</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-value">Co 2 dni</div>
-                            <div class="stat-label">Losowanie jednej osoby</div>
-                        </div>
-                    </div>
-                    
-                    <h4 style="color: #fff; margin-bottom: 1rem; text-align: center;">Co trzeba zrobić?</h4>
-                    
-                    <ul class="requirements-list">
-                        <li>
-                            <span class="requirement-icon">✓</span>
-                            <div>
-                                <div class="requirement-text">Załóż konto na Spinbetter z kodem <strong>CIOS</strong></div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="requirement-icon">✓</span>
-                            <div>
-                                <div class="requirement-text">Bądź aktywny na moich <strong>SOCIALMEDIACH!</strong></div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="requirement-icon">✓</span>
-                            <div>
-                                <div class="requirement-text">Minimalny depozyt <strong>(NIEWYMAGANY)</strong> szansę zwiększone kilku krotnie!</div>
-                            </div>
-                        </li>
-                        <li>
-                            <span class="requirement-icon">✓</span>
-                            <div>
-                                <div class="requirement-text">Wyślij na Instagrama <a style="text-decoration: underline; color: #fff; font-weight: 900;" href="https://www.instagram.com/mr_cios/">@mr_cios:</a></div>
-                                <div class="requirement-note">Hasło <strong>"GOTOWE"</strong> + Twoje ID konta na Spinbetter</div>
-                            </div>
-                        </li>
-                    </ul>
-                    
-                    <div class="account-note">
-                        <strong>UWAGA: </strong>NIE JEST TO LOTERIA! TYLKO 18+
-                    </div>
-                </div>
+                <div class="neon-side-line left"></div>
+                <div class="neon-side-line right"></div>
                 
-                <div style="text-align: center; margin-top: 1rem;">
-                    <p style="color: #d1d5db; font-size: 0.9rem;">
-                        Konto musi być utworzone od środy 3 grudnia z kodem <strong>CIOS</strong>
-                    </p>
-                     <p style="color: #d1d5db; font-size: 0.9rem;">
-                        NIE JEST WYMAGANA WERYFIKACJA <strong>KYC!</strong>
-                    </p>
-                    <p style="color: #a30606; font-weight: bold; margin-top: 0.5rem;">
-                        Co 2 dni jedna osoba wygrywa 1.000zł!
-                    </p>
+                <div class="table-inner">
+                    <!-- Nagłówek tabeli -->
+                    <div class="table-header">
+                        <h2 class="table-title">INFORMACJE O ROZDANIU</h2>
+                        <p class="table-subtitle">Wszystkie ważne szczegóły</p>
+                    </div>
+                    
+                    <!-- Kompaktowy grid z danymi -->
+                    <div class="info-grid-compact">
+                        <div class="info-item-compact info-item-compact-wide">
+                            <div class="info-label-compact">LICZBA WYGRANYCH</div>
+                            <div class="info-value-compact">CODZIENNIE 10 OSÓB</div>
+                            <div class="info-description-compact">Każda osoba: <span class="ice-code-compact">WYGRYWA LOSOWĄ KWOTĘ</span></div>
+                        </div>
+                        
+                        <div class="info-item-compact info-item-compact-wide">
+                            <div class="info-label-compact">KOD PROMOCYJNY</div>
+                            <div class="info-value-compact"><span class="ice-code-compact">CIOS</span></div>
+                            <div class="info-description-compact">Wymagany przy rejestracji</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Kompaktowa sekcja wymagań -->
+                    <div class="requirements-compact">
+                        <h3 class="requirements-title-compact">WYMAGANE KROKI</h3>
+                        <ul class="requirements-list-compact">
+                            <li class="requirement-item-compact">
+                                <div class="requirement-number-compact">1</div>
+                                <div class="requirement-content-compact">
+                                    <div class="requirement-text-compact">Rejestracja na DudeSpin z kodem <span class="ice-code-compact">CIOS</span></div>
+                            </li>
+                            <li class="requirement-item-compact">
+                                <div class="requirement-number-compact">2</div>
+                                <div class="requirement-content-compact">
+                                    <div class="requirement-text-compact">Wyślij wiadomość na Instagramie</div>
+                                    <div class="requirement-note-compact">O treści : <span class="ice-code-compact">"GOTOWE"</span> + e-mail przypisany do konta!</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Kompaktowa stopka -->
+                    <div class="table-footer-compact">
+                        <div class="footer-note-compact">
+                            <strong>WAŻNE:</strong> Tylko 18+. Nie jest to loteria. KYC niewymagane. Depozyt opcjonalny.
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="divider">
-                <div class="divider-line"></div>
-                <div class="divider-center">
-                    <div class="divider-dot"></div>
-                    <div class="divider-dot"></div>
-                    <div class="divider-dot-main"></div>
-                    <div class="divider-dot"></div>
-                    <div class="divider-dot"></div>
-                </div>
-                <div class="divider-line-reverse"></div>
-            </div>
-            
-        </section>
 
         <!-- Sekcja rekomendacji -->
         <section class="recommendations-section">
@@ -1584,7 +2123,7 @@
                 ODBIERZ NAJLEPSZE BONUSY
             </p>
             <div class="casino-card-container">
-                <div class="casino-card candy-cane-border-thick">
+                <div class="casino-card">
                     <div class="casino-card-bg">
                         <img alt="Spinbara Background" src="./banner1.png">
                         <div class="casino-card-bg-overlay"></div>
@@ -1592,12 +2131,12 @@
                     <div class="casino-card-content">
                         <div>
                             <div class="casino-logo">
-                                <img alt="Spinbetter Logo" src="./spinbetter.png">
+                                <img alt="DudeSpin Logo" src="./spinbetter.png">
                             </div>
                             <div class="bonus-badge" >
                                 <span>BONUS POWITALNY</span>
                             </div>
-                            <h4>111 FS z wagerem x15 do gry Chicken Chase™</h4>
+                            <h4>300% DO 9000k PLN + 200FS</h4>
                             <p>bez depozytu</p>
                             <div class="pros-section">
                                 <h5 class="pros-title">
@@ -1608,13 +2147,13 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M20 6 9 17l-5-5"></path>
                                         </svg>
-                                        <span>Bonus powitalny 150%</span>
+                                        <span>Bonus powitalny 300%</span>
                                     </li>
                                     <li>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                             <path d="M20 6 9 17l-5-5"></path>
                                         </svg>
-                                        <span>111 darmowych spinów</span>
+                                        <span>200 darmowych spinów</span>
                                     </li>
                                     <li>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1626,7 +2165,7 @@
                             </div>
                         </div>
                         <div class="bonus-button-container">
-                            <a href="https://redirspinner.com/2ASM?p=%2Fregistration%2F" target="_blank" rel="noopener noreferrer" class="bonus-button">
+                            <a href="https://dudsp.lynmonkel.com/?mid=332494_1975686" target="_blank" rel="noopener noreferrer" class="bonus-button">
                                 <span>Odbierz Bonus</span>
                             </a>
                         </div>
@@ -1641,7 +2180,7 @@
         <div class="divider-center">
             <div class="divider-dot"></div>
             <div class="divider-dot"></div>
-            <div class="divider-dot-main"></div>
+            <div class="divider-dot-main"><p>💰</p></div>
             <div class="divider-dot"></div>
             <div class="divider-dot"></div>
         </div>
